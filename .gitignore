@@ -1,0 +1,11 @@
+/node_modules
+
+node_modules/.bin/ansi-html
+src/components/.DS_Store
+src/components/footer/img/.DS_Store
+src/components/navBar/.DS_Store
+src/components/navBar/img/.DS_Store
+src/.DS_Store
+public/images/.DS_Store
+public/.DS_Store
+.DS_Store

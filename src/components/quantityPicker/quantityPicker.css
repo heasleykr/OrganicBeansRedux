@@ -1,0 +1,7 @@
+#plusBtn, #minusBtn{
+    margin: 1rem;
+    background-color: #242222;
+}
+#quantity{
+    font-size: 1.5rem;
+}

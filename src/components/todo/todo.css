@@ -1,0 +1,35 @@
+#todoHead{
+    padding: 5rem;
+    width: 100%;
+    background-color: #242222;
+
+}
+#todoTitle{
+    color: #4ea84b;
+    font-size: 3rem;
+}
+#todoMessage{
+    font-size: 1rem;
+    color: #d47e1b;
+    padding-bottom: 2rem;
+}
+#todoSec{
+    background-color: white;
+    border: 2px solid #d47e1b;
+}
+input{
+    margin-bottom: 2rem;
+    margin-right: .5rem;
+    filter: drop-shadow(1px 1px 1px #d47e1b);
+}
+li{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    border-bottom: 1px solid #dedede;
+}
+i{
+    color: red;
+}

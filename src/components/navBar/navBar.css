@@ -1,0 +1,18 @@
+#navMain{
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    height: 10rem;
+}
+#logoNav{
+    margin-top: .3rem;
+    margin-right: .5rem;
+    filter: drop-shadow(1px 2px 3px black);
+}
+.text{
+    font-size: 14px;
+    font-weight: bold;
+    color: navy;
+}
+#search{
+    margin-top: .4rem;
+}

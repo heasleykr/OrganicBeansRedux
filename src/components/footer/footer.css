@@ -1,0 +1,42 @@
+#footerMain{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    color: white;
+    background-color: #1f1309;
+    height: 15rem;
+    border-top: 1px solid white;
+    margin-top: 3rem;
+}
+#logoMain{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-left: 3srem;
+}
+#logo{
+    margin-top: 3.9rem;
+    margin-left: 3rem;
+    margin-right: 2rem;
+}
+#companyName{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#message{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: .5rem;
+    margin-left: 18rem;
+}
+#footerQ{
+    color: #d47e1b;
+    font-size: 2rem;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+#copy{
+    font-size: 1rem;
+    font-family: 'Open Sans Condensed', sans-serif;
+}

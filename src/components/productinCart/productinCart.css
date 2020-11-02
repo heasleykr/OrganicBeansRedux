@@ -1,0 +1,29 @@
+#cartDisplay{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: white;
+    border: 1px solid #d47e1b;
+    padding: .7rem;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+#cartMain{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+#cartTotal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid black;
+    padding: 1rem;
+}
+#displayTotal{
+    padding-bottom: .5rem;
+}

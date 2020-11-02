@@ -7,6 +7,7 @@ const cartProductsReducer = (state = [], action) => {
     console.log(action.payload);
     return copy; // return copy
   } else if (action.type === "REMOVE_PRODUCT") {
+    // Filter out requested product by id, return the remaining
     return state.filter((pc) => pc.product.id !== action.payload.product.id);
   }
   return state;

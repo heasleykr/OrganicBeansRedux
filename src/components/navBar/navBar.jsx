@@ -34,9 +34,9 @@ class NavBar extends Component {
             <div className="form-inline my-2 my-lg-0">
               {/* Cart total updates! */}
               <Link className="btn btn-outline-info my-2 my-sm-0" to="/cart">
-                <i className="fa fa-shopping-cart cart-icon" aria-hidden="true"></i>
                 View cart
-                <span className="badge badge-primary cart-badge">{this.props.count}</span>
+                <i id="cartI" className="fa fa-shopping-cart cart-icon" aria-hidden="true"></i>
+                <span className="badge badge-success cart-badge">{this.props.count}</span>
               </Link>
             </div>
           </div>

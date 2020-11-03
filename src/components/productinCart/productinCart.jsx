@@ -24,9 +24,9 @@ class ProductinCart extends Component {
                         <img src={"/images/products/" + this.props.data.product.image} id="cartImg" alt="" width="200px" height="200px"/>
                     </div>
                     <div id="cartMain">
-                        <h1><b>{this.props.data.product.title}</b></h1>
-                        <h2><b>Quantity:</b>{this.props.data.quantity}</h2>
-                        <h5><b>Unit Price:</b>${this.props.data.product.price}</h5>
+                        <h2><b>{this.props.data.product.title}</b></h2>
+                        <h3><b>Quantity: </b>{this.props.data.quantity}</h3>
+                        <h5><b>Unit Price: </b>${this.props.data.product.price}</h5>
                     </div>
                     <div id="cartTotal">
                         <h5 id="displayTotal"><b>Item Total:</b> ${this.props.data.product.price * this.props.data.quantity}</h5>

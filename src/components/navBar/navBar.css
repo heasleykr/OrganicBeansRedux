@@ -8,11 +8,18 @@
     margin-right: .5rem;
     filter: drop-shadow(1px 2px 3px black);
 }
-.text{
+/* .text{
     font-size: 14px;
     font-weight: bold;
     color: navy;
 }
 #search{
     margin-top: .4rem;
+} */
+
+#cartI{
+    color: #d47e1b;
+    font-size: 1.3rem;
+    margin-left: .5rem;
+    margin-right: .7rem;
 }

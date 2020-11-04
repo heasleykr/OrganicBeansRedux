@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
+import { connect } from "react-redux";
 import "./todo.css";
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import {fasCarrot} from '@font-awesome/free-solid-svg-icons';
-// const carrot = <FontAwesomeIcon icon={fasCarrot} />
+
+//Imprt your Redux Actions
+import { addTodo } from '../../store/actions/actions';
+
 
 class Todo extends Component {
     state = { 
         todoText: "",
-        todos: []
-     }
+        id: 0,
+    }
+
     render() { 
         return ( 
             <div id="todoHead">
@@ -19,12 +22,12 @@ class Todo extends Component {
                     value={this.state.todoText}
                     onChange={this.handleTextChange} 
                     placeholder="Todo Task"/>
-                    <button onClick={this.handleOnClick}>Add</button>
+                    <button onClick={this.addOnClick}>Add</button>
                 </div>
 
                 <div id="todoSec">
                     <ul>
-                        {this.state.todos.map((d) => <li key={d}>{d}</li>)}
+                        {this.props.todo.map((d) => <li key={d.id}>{d.task}</li>)}
                     </ul>
                 </div>
             </div>
@@ -35,20 +38,57 @@ class Todo extends Component {
         this.setState({todoText: event.target.value});
     }
 
-    handleOnClick = (e) => {
+    // Add Todo to state on click
+    addOnClick = () => {
 
-        // Okay, but DONT modify the state directly 
-        console.log(this.state.todoText);
-        // this.state.todos.push(this.state.todoText);
-        // this.setState({todoText:  ""});
+        // Create task obj literal
+        const todoObj = {
+            task: this.state.todoText,
+            id: this.state.id + 1,
+        };
 
-        var list = [...this.state.todos]; // CLONE the list
-        list.push(this.state.todoText); 
-        this.setState({ todos: list, todoText: ""}); //Now update with new list and text
+        // Push todo task to Store
+        this.props.addTodo(todoObj);
+
+        //Set text back to blank
+        //Increment id
+        var counter = this.state.id + 1;
+
+        this.setState({ todoText: ""}); 
+        this.setState({ id: counter});
         
-    } 
+    }
+    
+    // TODO: Write function to delete. Add button to display
+    // Delete Todo frome store on click
+    deleteOnClick = () => {
+
+        // Create task obj literal
+        // const todoObj = {
+        //     task: this.state.todoText,
+        //     id: this.state.id + 1,
+        // };
+
+        // Push todo task to Store
+        // this.props.addTodo(todoObj);
+
+        //Set text back to blank
+        //Increment id
+        // var counter = this.state.id + 1;
+
+        // this.setState({ todoText: ""}); 
+        // this.setState({ id: counter});
+        
+    }
 }
+
+// Grab state properties to use with our Component
+const mapStateToProps = (state) => {
+    return {
+        todo: state.todo //todo is an array in props
+    }
+};
  
-export default Todo;
+export default connect(mapStateToProps, { addTodo, removeTodo })(Todo);
 
 

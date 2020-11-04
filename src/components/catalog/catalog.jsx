@@ -102,7 +102,7 @@ class Catalog extends Component{
             }
         }
 
-        // HOMEWORK TODO   SORT CATEGORY ARRAY AND SET STATE
+        //SORT CATEGORY ARRAY AND SET STATE
         catagories = catagories.sort();
 
         console.log(catagories);

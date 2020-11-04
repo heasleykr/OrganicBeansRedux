@@ -22,3 +22,19 @@ export const removeProductInCart = (product) => {
     payload: product,
   };
 };
+
+/********************* Todo Actions **********************/
+export const addTodo = (todo) => {
+  return {
+    type: "ADD_TODO",
+    payload: todo,
+  };
+};
+
+// This action receives a todo and requests dispatch to remove it from list.
+export const removeTodo = (todo) => {
+  return {
+    type: "REMOVE_TODO",
+    payload: todo,
+  };
+};

@@ -6,16 +6,7 @@ import "./productinCart.css";
 
 class ProductinCart extends Component {
     state = {};
-    /** Render:
-     * Image
-     * Title
-     * quantity
-     * Total
-     * Button to delete from cart array EXTRA HOMEWORK
-     *      create action 'REMOVE_PRODUCT'
-     *      dispatch action
-     *      implement the reducer
-     */
+    
     render(){
         return (
             <React.Fragment>

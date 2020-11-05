@@ -28,8 +28,8 @@ class ProductinCart extends Component {
         );
     }
 
-    // FINISH THIS TODAY
-
+    
+    //Function to remove clicked
     removeClicked = () => {
         console.log('Remove Product Clicked!!');
         var productRemove = {

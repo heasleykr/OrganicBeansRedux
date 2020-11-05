@@ -4,6 +4,7 @@ import "./todo.css";
 
 //Imprt your Redux Actions
 import { addTodo } from '../../store/actions/actions';
+import { removeTodo } from '../../store/actions/actions';
 
 
 class Todo extends Component {
@@ -17,7 +18,7 @@ class Todo extends Component {
             <div id="todoHead">
                 <h5 id="todoTitle">Green Reminders Here.</h5>
                 <h5 id="todoMessage">What's on your mind?</h5>
-                <div>
+                <div className="inputField">
                     <input type="text" 
                     value={this.state.todoText}
                     onChange={this.handleTextChange} 
@@ -26,9 +27,12 @@ class Todo extends Component {
                 </div>
 
                 <div id="todoSec">
-                    <ul>
-                        {this.props.todo.map((d) => <li key={d.id}>{d.task}</li>)}
-                    </ul>
+                        {/* Display Task from Store */}
+                        {this.props.todo.map((d) => <div className="todoItem" key={d.id}>
+                            <h5 className="taskName">{d.task}</h5>
+                            <button onClick={() => this.deleteOnClick(d)} className="btn btn-warning">Delete Task</button>
+                        </div>
+                        )}
                 </div>
             </div>
          );
@@ -38,7 +42,7 @@ class Todo extends Component {
         this.setState({todoText: event.target.value});
     }
 
-    // Add Todo to state on click
+    // Add Todo to store on click
     addOnClick = () => {
 
         // Create task obj literal
@@ -59,26 +63,11 @@ class Todo extends Component {
         
     }
     
-    // TODO: Write function to delete. Add button to display
-    // Delete Todo frome store on click
-    deleteOnClick = () => {
+    // Function to delete Todo from store on click
+    deleteOnClick = (todo) => {
 
-        // Create task obj literal
-        // const todoObj = {
-        //     task: this.state.todoText,
-        //     id: this.state.id + 1,
-        // };
-
-        // Push todo task to Store
-        // this.props.addTodo(todoObj);
-
-        //Set text back to blank
-        //Increment id
-        // var counter = this.state.id + 1;
-
-        // this.setState({ todoText: ""}); 
-        // this.setState({ id: counter});
-        
+        // Call action function and dispatch request
+        this.props.removeTodo(todo);
     }
 }
 

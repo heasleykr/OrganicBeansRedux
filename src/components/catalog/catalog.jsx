@@ -50,6 +50,7 @@ class Catalog extends Component{
 
                         { this.state.catagories.map((c) => 
                             <button 
+                                key={c}
                                 onClick={() => this.selectCategory(c)} id="buttonC">{c}
                             </button>)}
                 </div>

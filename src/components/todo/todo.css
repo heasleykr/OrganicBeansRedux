@@ -22,14 +22,29 @@ input{
     margin-right: .5rem;
     filter: drop-shadow(1px 1px 1px #d47e1b);
 }
-li{
+.inputField{
+    margin-bottom: 3rem;
+}
+.todoItem{
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     padding-top: 1rem;
     padding-left: 1rem;
+    padding-bottom: 1rem;
     border-bottom: 1px solid #dedede;
 }
+.taskName{
+    padding-top: .5rem;
+    padding-left: 1rem;
+    padding-right: 5rem;
+}
+/* .btn-warning{
+    /* display: flex;
+    flex-direction: row;
+    align-content: right; 
+    padding-left: 5rem;
+} */
 i{
     color: red;
 }

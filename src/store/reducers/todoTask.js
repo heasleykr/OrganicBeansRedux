@@ -8,7 +8,7 @@ const todoTaskReducer = (state = [], action) => {
       return copy; //return copy
     case "REMOVE_TODO":
       //Filter out tasks and remove requested by id
-      return state.filter((t) => t.todo.id !== action.payload.todo.id);
+      return state.filter((t) => t.id !== action.payload.id);
     default:
       return state;
   }
